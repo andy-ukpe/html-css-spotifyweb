@@ -7,60 +7,129 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="Framework/12bool.css">
   </head>
   <body>
-    <header>
-
-    </header>
     <main class="clearfix">
-      <nav class="ms_barnav">
-        <div class="container_flex">
-          <div class="ms_logo">
-            <img src="img/logo.svg" alt="logo">
-          </div>
-          <div class="ms_menu">
-            <ul>
-              <li><i class="fas fa-home icon"></i>Home</li>
-              <li><i class="fas fa-search"></i>Cerca</li>
-              <li><i class="fas fa-book"></i>La tua libreria</li>
-            </ul>
-          </div>
-          <div class="ms_playlist">
-            <div class="ms_crea">
-              <h1>PLAYLIST</h1>
-              <p><i class="fas fa-plus-square"></i>Crea Playlist</p>
+      <div class="navbar">
+        <div class="logo">
+          <img  class="xs-display-none" src="img/logo.svg" alt="logo">
+          <img class="sm-display-none small-logo" src="img/logo-small.svg" alt="small-logo">
+        </div>
+        <div class="menu">
+          <ul>
+            <li><img src="img/home.svg" alt=""> <a class="xs-display-none" href="#">Home</a></li>
+            <li><i class="fas fa-search xs-display-none"></i> <a class="xs-display-none" href="#">Cerca</a></li>
+            <li><i class="fas fa-book xs-display-none"></i><a class="xs-display-none" href="#">La tua libreria</a></li>
+          </ul>
+        </div>
+        <div class="playlist">
+          <h1 class="xs-display-none">PLAYLIST</h1>
+            <div class="crea-playlist clearfix">
+              <div class="aggiungi xs-display-none"><a href="#"><i class="fas fa-plus-square "></i></a>
+              </div>
+              <p class="xs-display-none">Crea Playlist</p>
             </div>
-            <div class="ms_nome_playlist">
+            <div class="nuova-playlist xs-display-none">
               <ul>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
+                <li>Nuova Playlist</li>
+                <li>Nuova Playlist</li>
+                <li>Nuova Playlist</li>
+                <li>Nuova Playlist</li>
+                <li>Nuova Playlist</li>
+                <li>Nuova Playlist</li>
               </ul>
             </div>
-            <div class="ms_cta">
-              <p>Installa App</p>
-            </div>
-            <hr>
-            <div class="ms_nome">
-              <p>John Doe</p>
-            </div>
-          </div>
         </div>
-      </nav>
-      <div class="ms_main_container">
-        <div class="ms_upgrade_bar">
-          <div class="ms_upgrade_button">
-            <p>EFFETUA L'UPGRADE</p>
+        <div class="tab-user">
+          <div class="app">
+            <div class="icon-download">
+              <i class="fas fa-arrow-circle-down"></i>
+            </div>
+            <div class=" text-app">
+              <p class="xs-display-none">Installa App</p>
+            </div>
+
+          </div>
+          <hr class="xs-display-none">
+          <div class="user">
+            <div class="circle"><img src="img/profile.svg" alt=""></div>
+            <div class="text-name">
+              <p class="xs-display-none">John Doe</p>
+            </div>
+
           </div>
         </div>
       </div>
-    </main>
-    <footer>
 
-    </footer>
+      <!-- collezione musicale -->
+      <div class="main-content">
+        <div class="sezione-upgrade">
+          <div class="button-upgrade">
+            <p><a href="#">EFFETUA L'UPGRADE</a></p>
+          </div>
+        </div>
+        <div class="collezione-musicale">
+          <ul>
+            <li><a href="#">IN EVIDENZA</a></li>
+            <li><a href="#">PODCAST</a></li>
+            <li><a href="#">CLASSIFICHE</a></li>
+            <li><a href="#">GENERI E MOOD</a></li>
+            <li><a href="#">NUOVE USCITE</a></li>
+            <li><a href="#">SCOPRI</a></li>
+          </ul>
+        <h3>Recently Played</h3>
+        <div class="content-recently-played clearfix">
+          <div class="col-lg-2 col-md-3 col-sm-6{">
+            <img src="img/metal_lifting.jpg" alt="">
+            <h4>Heavy Metal</h4>
+            <p>Subtitle</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-6">
+            <img src="img/stranger.jpeg" alt="">
+            <h4>Stranger Things vol.1 (la Netflix Origginal Sound track)</h4>
+            <p>Kyle Dixon e Michael Stain</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-6">
+            <img src="img/aquietplace.jpeg" alt="">
+            <h4>A quiet place</h4>
+            <p>Subtitle</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-6">
+            <img src="img/split.jpeg" alt="">
+            <h4>Split</h4>
+            <p>Subtitle</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-6">
+            <img src="img/cure.jpeg" alt="">
+            <h4>A cure for wellness</h4>
+            <p>Subtitle</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-6">
+            <img src="img/sinister.jpeg" alt="">
+            <h4>Sinister</h4>
+            <p>Subtitle</p>
+          </div>
+          <!-- collezione musicale -->
+        </div>
+        </div>
+
+      <div class="playlist-personale ">
+        <h3>Creato per Joe Doe</h3>
+        <p>Più ascolti più saranno </p>
+        <div class="main-content clearfix">
+          <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6">
+            <img src="img/radar.jpeg" alt="">
+            <h4>realise radar</h4>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6">
+            <img src="img/mixdaily.jpeg" alt="">
+            <h4>Daily mix 1</h4>
+          </div>
+        </div>
+      </div>
+      </div>
+    </main>
+    <footer></footer>
   </body>
 </html>
