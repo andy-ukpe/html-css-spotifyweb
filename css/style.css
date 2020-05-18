@@ -143,13 +143,29 @@
 .collezione-musicale{
   padding: 15px;
 }
+.collezione-musicale ul li:first-child{
+  position: relative;
+}
+.collezione-musicale .actual-page{
+  width: 50px;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 36%;
+  background-color: lightgreen;
+}
 .collezione-musicale ul{
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-grow: 1;
 }
 .collezione-musicale ul li{
-  text-decoration: none;
-  display: inline-block;
+  list-style-type: none;
   padding: 15px;
+  flex-basis: calc( 100% / 6 );
   color: white;
   font-size: 12px;
 }
@@ -160,25 +176,129 @@
 .collezione-musicale:first-of-child{
   border-bottom: 2px solid limegreen;
 }
-.collezione-musicale h3{
+/* cover collection */
+.cover-collection{
+  padding: 15px;
+}
+.cover-collection h2{
   color: white;
   padding: 10px 0;
 }
-/* collezione musicale */
-.main-content img{
-  width: 100%;
-  padding: 5px;
+.cover-collection h3{
+  color: white;
 }
+.cover-collection p{
+  color: #51545a;
+}
+.cover-collection .cover-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.cover-collection .cover-item{
+  flex-basis: calc( 100% / 6 );
+  padding: 5px;
+  text-align: center;
+}
+.cover-collection .cover-image{
+  position: relative;
+}
+.cover-collection .cover-image img{
+  width: 100%;
+}
+.cover-collection .cover-image .layover{
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.cover-collection .cover-item:hover .layover{
+  display: block;
+}
+.cover-collection .cover-image .layover i{
+  position: absolute;
+  color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+  font-size: 20px;
+}
+.cover-collection .cover-item .round-image{
+  border-radius: 50%;
+}
+/* collezione musicale */
 .main-content h4{
   color: white;
 }
-@media all and (max-width:750px){
+@media all and (max-width:970px) {
+  .cover-collection .cover-item {
+    flex-basis: calc( 100% / 4 );
+  }
+  .collezione-musicale ul li{
+    flex-basis: calc( 100% / 5 );
+  }
+}
 /* footer*/
 footer{
   height: 70px;
   width: 100%;
   background-color: #282828;
  }
+
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.current-song,
+.volume{
+  flex-basis: 250px;
+}
+.player{
+  flex-basis: 40%;
+  text-align: center;
+}
+.progress-bar{
+  margin-top: 20px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+ }
+.progress-bar .bar{
+  width: 80%;
+  height: 4px;
+  background-color: grey;
+  border-radius: 5px;
+  position: relative;
+}
+.current-progress-bar{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 11%;
+  background-color: lightgrey;
+}
+.current-progress-bar::after{
+  content: '';
+  position: absolute;
+  top: -130%;;
+  right: 0;
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 50%;
+  display: none;
+}
+.current-progress-bar:hover{
+  background-color: lightgreen;
+}
+.current-progress-bar:hover::after{
+  display: block;
 }
 /* media query */
 @media all and (max-width: 750px) {
@@ -212,7 +332,12 @@ footer{
   .main-content{
     width: calc( 100% - 40px );
   }
-
+  .collezione-musicale ul li{
+    flex-basis: calc( 100% / 3 );
+  }
+  .cover-collection .cover-item {
+    flex-basis: calc( 100% / 2 );
+  }
 }
 @media all and (min-width: 750px){
   .sm-display-none{
